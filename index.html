@@ -3,112 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joey的个人网站 - 欢迎访问</title>
+    <title>Joey - 创作者 & 开发者</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Joey</h1>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Joey</span>
+                <div class="logo-dot"></div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#articles">文章</a></li>
-                <li><a href="#products">产品</a></li>
-                <li><a href="#portfolio">作品集</a></li>
-                <li><a href="#contact">联系我</a></li>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#work" class="nav-link">作品</a></li>
+                <li><a href="#articles" class="nav-link">文章</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>欢迎来到我的个人网站</h2>
-                <p>这里是我分享文章、展示产品和作品的地方</p>
-                <a href="#about" class="cta-button">了解更多</a>
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>👋 欢迎访问</span>
+                    </div>
+                    <h1 class="hero-title">
+                        我是 <span class="highlight">Joey</span><br>
+                        一个热爱创造的<br>
+                        <span class="typing-text">开发者</span>
+                    </h1>
+                    <p class="hero-description">
+                        专注于创建有意义的数字体验，通过代码和设计连接想法与现实。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#work" class="btn-primary">
+                            <span>查看作品</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn-secondary">联系我</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span> 
+                                <span class="code-var">developer</span> 
+                                <span class="code-operator">=</span> 
+                                <span class="code-string">"Joey"</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-keyword">console</span><span class="code-operator">.</span><span class="code-method">log</span><span class="code-bracket">(</span><span class="code-string">"Hello World!"</span><span class="code-bracket">)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>关于我</h2>
-                <p>我是Joey，一个热爱技术和创作的人。在这里，我分享我的思考、创作和项目。</p>
+        <!-- 关于我 -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">关于我</span>
+                    <h2 class="section-title">创造力与技术的结合</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            我是一名充满热情的开发者和创作者，专注于构建优雅且实用的数字产品。
+                            我相信技术的力量能够改变世界，每一行代码都是对未来的投资。
+                        </p>
+                        <p>
+                            在我的职业生涯中，我不断学习新技术，探索创新的解决方案，
+                            并致力于将复杂的概念转化为直观的用户体验。
+                        </p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">💻</div>
+                                <h3>前端开发</h3>
+                                <p>现代化的Web应用开发</p>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🎨</div>
+                                <h3>UI/UX设计</h3>
+                                <p>用户体验与界面设计</p>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">🚀</div>
+                                <h3>产品开发</h3>
+                                <p>从概念到产品的完整流程</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">年经验</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">完成项目</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">技术栈</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="articles" class="articles">
-            <div class="container">
-                <h2>最新文章</h2>
+        <!-- 作品集 -->
+        <section id="work" class="work-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">作品集</span>
+                    <h2 class="section-title">精选项目</h2>
+                </div>
+                <div class="work-grid">
+                    <div class="work-item featured">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>🎨</span>
+                            </div>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-category">Web应用</div>
+                            <h3 class="work-title">个人作品集网站</h3>
+                            <p class="work-description">
+                                使用现代技术栈构建的响应式个人网站，
+                                展示创意设计和技术实现。
+                            </p>
+                            <div class="work-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="work-links">
+                                <a href="#" class="work-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    查看项目
+                                </a>
+                                <a href="#" class="work-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>🚀</span>
+                            </div>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-category">产品设计</div>
+                            <h3 class="work-title">创新产品原型</h3>
+                            <p class="work-description">
+                                探索新的交互方式和用户体验设计。
+                            </p>
+                            <div class="work-tech">
+                                <span>Figma</span>
+                                <span>Prototype</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>💡</span>
+                            </div>
+                        </div>
+                        <div class="work-content">
+                            <div class="work-category">开源项目</div>
+                            <h3 class="work-title">实用工具库</h3>
+                            <p class="work-description">
+                                提高开发效率的开源工具集合。
+                            </p>
+                            <div class="work-tech">
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文章 -->
+        <section id="articles" class="articles-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">文章</span>
+                    <h2 class="section-title">最新思考</h2>
+                </div>
                 <div class="articles-grid">
                     <article class="article-card">
-                        <h3>文章标题1</h3>
-                        <p>文章简介...</p>
-                        <a href="articles/article1.html" class="read-more">阅读更多</a>
+                        <div class="article-date">2024.01.15</div>
+                        <h3 class="article-title">
+                            <a href="articles/article2.html">如何搭建个人网站</a>
+                        </h3>
+                        <p class="article-excerpt">
+                            分享使用GitHub Pages搭建个人网站的完整流程，
+                            从零开始创建属于自己的网络空间。
+                        </p>
+                        <div class="article-tags">
+                            <span>GitHub Pages</span>
+                            <span>Web开发</span>
+                        </div>
                     </article>
                     <article class="article-card">
-                        <h3>文章标题2</h3>
-                        <p>文章简介...</p>
-                        <a href="articles/article2.html" class="read-more">阅读更多</a>
+                        <div class="article-date">2024.01.01</div>
+                        <h3 class="article-title">
+                            <a href="articles/article1.html">我的第一篇文章</a>
+                        </h3>
+                        <p class="article-excerpt">
+                            记录创建个人网站的初衷和想法，
+                            分享我对技术和创作的热爱。
+                        </p>
+                        <div class="article-tags">
+                            <span>个人感悟</span>
+                            <span>技术分享</span>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="products" class="products">
-            <div class="container">
-                <h2>我的产品</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>产品1</h3>
-                        <p>产品描述...</p>
-                        <a href="#" class="product-link">查看详情</a>
+        <!-- 联系我 -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="contact-title">让我们开始对话</h2>
+                        <p class="contact-description">
+                            有项目想要合作？想要交流技术？
+                            或者只是想说声hello？我很乐意听到你的声音。
+                        </p>
+                        <div class="contact-links">
+                            <a href="mailto:joey@example.com" class="contact-link">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-text">
+                                    <span>Email</span>
+                                    <span>joey@example.com</span>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Joeywbbab" class="contact-link">
+                                <div class="contact-icon">🐱</div>
+                                <div class="contact-text">
+                                    <span>GitHub</span>
+                                    <span>@Joeywbbab</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="product-card">
-                        <h3>产品2</h3>
-                        <p>产品描述...</p>
-                        <a href="#" class="product-link">查看详情</a>
+                    <div class="contact-form">
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="name">姓名</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">消息</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <span>发送消息</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <h2>作品集</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <h3>项目1</h3>
-                        <p>项目描述...</p>
-                        <a href="#" class="portfolio-link">查看项目</a>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>项目2</h3>
-                        <p>项目描述...</p>
-                        <a href="#" class="portfolio-link">查看项目</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>联系我</h2>
-                <p>如果您想与我交流，请通过以下方式联系我：</p>
-                <div class="contact-info">
-                    <p>Email: joey@example.com</p>
-                    <p>GitHub: <a href="https://github.com/joey_uni" target="_blank">joey_uni</a></p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Joey. 保留所有权利。</p>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Joey. 用 ❤️ 和 ☕ 制作</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">回到顶部</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // 简单的平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 移动端导航切换
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 打字效果
+        const typingText = document.querySelector('.typing-text');
+        const words = ['开发者', '设计师', '创作者', '梦想家'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                setTimeout(() => isDeleting = true, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? 50 : 100);
+        }
+
+        typeEffect();
+    </script>
 </body>
 </html>
