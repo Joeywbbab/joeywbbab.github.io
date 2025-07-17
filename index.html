@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joey - 创作者 & 开发者</title>
+    <title>Joey - 创意开发者 ✨</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 背景装饰 -->
+    <div class="bg-decorations">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+    </div>
+
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-text">Joey</span>
-                <div class="logo-dot"></div>
+                <div class="logo-sparkle">✨</div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">首页</a></li>
                 <li><a href="#about" class="nav-link">关于</a></li>
                 <li><a href="#work" class="nav-link">作品</a></li>
-                <li><a href="#articles" class="nav-link">文章</a></li>
+                <li><a href="#articles" class="nav-link">想法</a></li>
                 <li><a href="#contact" class="nav-link">联系</a></li>
             </ul>
             <div class="nav-toggle">
@@ -36,180 +45,286 @@
         <section id="home" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
-                    <div class="hero-badge">
-                        <span>👋 欢迎访问</span>
+                    <div class="hero-greeting">
+                        <span class="greeting-emoji">👋</span>
+                        <span class="greeting-text">你好，我是</span>
                     </div>
+                    
                     <h1 class="hero-title">
-                        我是 <span class="highlight">Joey</span><br>
-                        一个热爱创造的<br>
-                        <span class="typing-text">开发者</span>
+                        <span class="name-highlight">Joey</span>
+                        <br>
+                        <span class="title-line">一个热爱</span>
+                        <span class="rotating-words">
+                            <span class="word active">创造</span>
+                            <span class="word">设计</span>
+                            <span class="word">代码</span>
+                            <span class="word">美学</span>
+                        </span>
+                        <span class="title-line">的开发者</span>
                     </h1>
-                    <p class="hero-description">
-                        专注于创建有意义的数字体验，通过代码和设计连接想法与现实。
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#work" class="btn-primary">
+                    
+                    <div class="hero-description">
+                        <p>我相信每一行代码都是艺术，每一个设计都是故事。</p>
+                        <p>让我们一起创造一些<span class="highlight-text">令人惊艳</span>的数字体验。</p>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#work" class="cta-primary">
                             <span>查看作品</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <div class="cta-arrow">→</div>
                         </a>
-                        <a href="#contact" class="btn-secondary">联系我</a>
+                        <a href="#contact" class="cta-secondary">
+                            <span>开始对话</span>
+                            <div class="cta-heart">💬</div>
+                        </a>
                     </div>
                 </div>
+                
                 <div class="hero-visual">
-                    <div class="visual-card">
-                        <div class="card-header">
-                            <div class="card-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                    <div class="visual-container">
+                        <div class="floating-card card-1">
+                            <div class="card-content">
+                                <div class="card-icon">🎨</div>
+                                <div class="card-text">创意设计</div>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <div class="code-line">
-                                <span class="code-keyword">const</span> 
-                                <span class="code-var">developer</span> 
-                                <span class="code-operator">=</span> 
-                                <span class="code-string">"Joey"</span>
+                        <div class="floating-card card-2">
+                            <div class="card-content">
+                                <div class="card-icon">⚡</div>
+                                <div class="card-text">快速开发</div>
                             </div>
-                            <div class="code-line">
-                                <span class="code-keyword">console</span><span class="code-operator">.</span><span class="code-method">log</span><span class="code-bracket">(</span><span class="code-string">"Hello World!"</span><span class="code-bracket">)</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="card-content">
+                                <div class="card-icon">✨</div>
+                                <div class="card-text">用户体验</div>
+                            </div>
+                        </div>
+                        <div class="center-avatar">
+                            <div class="avatar-container">
+                                <div class="avatar-image">
+                                    <div class="avatar-emoji">🧑‍💻</div>
+                                </div>
+                                <div class="avatar-status">
+                                    <span class="status-dot"></span>
+                                    <span class="status-text">正在创作中</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- 滚动提示 -->
+            <div class="scroll-hint">
+                <div class="scroll-text">向下滚动探索更多</div>
+                <div class="scroll-arrow">↓</div>
+            </div>
         </section>
 
-        <!-- 关于我 -->
+        <!-- 分割线 -->
+        <div class="section-divider">
+            <div class="divider-content">
+                <span class="divider-text">∿ 关于我的故事 ∿</span>
+            </div>
+        </div>
+
+        <!-- 关于我区域 -->
         <section id="about" class="about-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">关于我</span>
-                    <h2 class="section-title">创造力与技术的结合</h2>
-                </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>
-                            我是一名充满热情的开发者和创作者，专注于构建优雅且实用的数字产品。
-                            我相信技术的力量能够改变世界，每一行代码都是对未来的投资。
-                        </p>
-                        <p>
-                            在我的职业生涯中，我不断学习新技术，探索创新的解决方案，
-                            并致力于将复杂的概念转化为直观的用户体验。
-                        </p>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-icon">💻</div>
-                                <h3>前端开发</h3>
-                                <p>现代化的Web应用开发</p>
+                        <div class="section-intro">
+                            <h2 class="section-title">创造力遇见技术</h2>
+                            <p class="section-subtitle">每个项目都是一次新的冒险</p>
+                        </div>
+                        
+                        <div class="story-content">
+                            <div class="story-block">
+                                <div class="story-number">01</div>
+                                <div class="story-text">
+                                    <h3>设计思维</h3>
+                                    <p>我相信好的设计不仅仅是美观，更是解决问题的艺术。每一个像素都有它的意义，每一个交互都承载着情感。</p>
+                                </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">🎨</div>
-                                <h3>UI/UX设计</h3>
-                                <p>用户体验与界面设计</p>
+                            
+                            <div class="story-block">
+                                <div class="story-number">02</div>
+                                <div class="story-text">
+                                    <h3>技术实现</h3>
+                                    <p>从前端到后端，从概念到产品，我用代码将想法变为现实。技术是工具，创造力是灵魂。</p>
+                                </div>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-icon">🚀</div>
-                                <h3>产品开发</h3>
-                                <p>从概念到产品的完整流程</p>
+                            
+                            <div class="story-block">
+                                <div class="story-number">03</div>
+                                <div class="story-text">
+                                    <h3>持续成长</h3>
+                                    <p>技术日新月异，学习永无止境。我热爱探索新技术，拥抱变化，在创新中找到快乐。</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">年经验</div>
+                    
+                    <div class="about-visual">
+                        <div class="skills-showcase">
+                            <div class="skill-category">
+                                <h4>前端技术</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Vue.js</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">CSS/SCSS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>设计工具</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">Adobe Creative Suite</span>
+                                    <span class="skill-tag">Sketch</span>
+                                    <span class="skill-tag">Principle</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h4>后端技术</h4>
+                                <div class="skill-items">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Database</span>
+                                    <span class="skill-tag">API Design</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">20+</div>
-                            <div class="stat-label">完成项目</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">技术栈</div>
+                        
+                        <div class="experience-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">年开发经验</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label">完成项目</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">∞</div>
+                                <div class="stat-label">学习热情</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 作品集 -->
+        <!-- 分割线 -->
+        <div class="section-divider">
+            <div class="divider-content">
+                <span class="divider-text">∿ 精选作品 ∿</span>
+            </div>
+        </div>
+
+        <!-- 作品集区域 -->
         <section id="work" class="work-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">作品集</span>
-                    <h2 class="section-title">精选项目</h2>
+                <div class="work-header">
+                    <h2 class="section-title">创意作品集</h2>
+                    <p class="section-subtitle">每个项目都是一次突破</p>
                 </div>
+                
                 <div class="work-grid">
                     <div class="work-item featured">
                         <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>🎨</span>
+                            <div class="work-preview">
+                                <div class="preview-gradient"></div>
+                                <div class="preview-content">
+                                    <div class="preview-icon">🎨</div>
+                                    <div class="preview-text">个人作品集</div>
+                                </div>
                             </div>
                         </div>
                         <div class="work-content">
-                            <div class="work-category">Web应用</div>
-                            <h3 class="work-title">个人作品集网站</h3>
+                            <div class="work-meta">
+                                <span class="work-category">Web设计</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">现代化个人网站</h3>
                             <p class="work-description">
-                                使用现代技术栈构建的响应式个人网站，
-                                展示创意设计和技术实现。
+                                一个充满创意和个性的个人作品集网站，
+                                融合了现代设计理念和先进的前端技术。
                             </p>
                             <div class="work-tech">
                                 <span>HTML5</span>
                                 <span>CSS3</span>
                                 <span>JavaScript</span>
+                                <span>响应式设计</span>
                             </div>
-                            <div class="work-links">
-                                <a href="#" class="work-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    查看项目
+                            <div class="work-actions">
+                                <a href="#" class="work-link primary">
+                                    <span>查看项目</span>
+                                    <div class="link-arrow">↗</div>
                                 </a>
-                                <a href="#" class="work-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    源码
+                                <a href="#" class="work-link secondary">
+                                    <span>源代码</span>
+                                    <div class="link-icon">🔗</div>
                                 </a>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="work-item">
                         <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>🚀</span>
+                            <div class="work-preview">
+                                <div class="preview-gradient orange"></div>
+                                <div class="preview-content">
+                                    <div class="preview-icon">🚀</div>
+                                    <div class="preview-text">产品设计</div>
+                                </div>
                             </div>
                         </div>
                         <div class="work-content">
-                            <div class="work-category">产品设计</div>
-                            <h3 class="work-title">创新产品原型</h3>
+                            <div class="work-meta">
+                                <span class="work-category">UI/UX</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">创新应用界面</h3>
                             <p class="work-description">
-                                探索新的交互方式和用户体验设计。
+                                专注于用户体验的移动应用设计，
+                                简洁而富有表现力的界面设计。
                             </p>
                             <div class="work-tech">
                                 <span>Figma</span>
                                 <span>Prototype</span>
+                                <span>用户研究</span>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="work-item">
                         <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>💡</span>
+                            <div class="work-preview">
+                                <div class="preview-gradient green"></div>
+                                <div class="preview-content">
+                                    <div class="preview-icon">⚡</div>
+                                    <div class="preview-text">开发工具</div>
+                                </div>
                             </div>
                         </div>
                         <div class="work-content">
-                            <div class="work-category">开源项目</div>
-                            <h3 class="work-title">实用工具库</h3>
+                            <div class="work-meta">
+                                <span class="work-category">开源</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">效率工具库</h3>
                             <p class="work-description">
-                                提高开发效率的开源工具集合。
+                                提升开发效率的实用工具集合，
+                                帮助开发者更快更好地完成项目。
                             </p>
                             <div class="work-tech">
                                 <span>TypeScript</span>
                                 <span>Node.js</span>
+                                <span>CLI工具</span>
                             </div>
                         </div>
                     </div>
@@ -217,92 +332,146 @@
             </div>
         </section>
 
-        <!-- 文章 -->
+        <!-- 分割线 -->
+        <div class="section-divider">
+            <div class="divider-content">
+                <span class="divider-text">∿ 思考与分享 ∿</span>
+            </div>
+        </div>
+
+        <!-- 文章区域 -->
         <section id="articles" class="articles-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">文章</span>
-                    <h2 class="section-title">最新思考</h2>
+                <div class="articles-header">
+                    <h2 class="section-title">想法与见解</h2>
+                    <p class="section-subtitle">记录成长的每一步</p>
                 </div>
+                
                 <div class="articles-grid">
-                    <article class="article-card">
-                        <div class="article-date">2024.01.15</div>
-                        <h3 class="article-title">
-                            <a href="articles/article2.html">如何搭建个人网站</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            分享使用GitHub Pages搭建个人网站的完整流程，
-                            从零开始创建属于自己的网络空间。
-                        </p>
-                        <div class="article-tags">
-                            <span>GitHub Pages</span>
-                            <span>Web开发</span>
+                    <article class="article-card featured">
+                        <div class="article-image">
+                            <div class="article-gradient"></div>
+                            <div class="article-icon">🏗️</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">2024年1月15日</span>
+                                <span class="article-category">技术分享</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="articles/article2.html">从零开始搭建个人网站</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                分享我使用GitHub Pages搭建个人网站的完整过程，
+                                从域名配置到设计实现的每一个细节。
+                            </p>
+                            <div class="article-tags">
+                                <span>GitHub Pages</span>
+                                <span>Web开发</span>
+                                <span>个人品牌</span>
+                            </div>
                         </div>
                     </article>
+                    
                     <article class="article-card">
-                        <div class="article-date">2024.01.01</div>
-                        <h3 class="article-title">
-                            <a href="articles/article1.html">我的第一篇文章</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            记录创建个人网站的初衷和想法，
-                            分享我对技术和创作的热爱。
-                        </p>
-                        <div class="article-tags">
-                            <span>个人感悟</span>
-                            <span>技术分享</span>
+                        <div class="article-image">
+                            <div class="article-gradient purple"></div>
+                            <div class="article-icon">💭</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">2024年1月1日</span>
+                                <span class="article-category">个人感悟</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="articles/article1.html">创作的初心</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                记录我创建这个网站的初衷，
+                                以及对技术和设计的热爱。
+                            </p>
+                            <div class="article-tags">
+                                <span>个人感悟</span>
+                                <span>创作分享</span>
+                            </div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 联系我 -->
+        <!-- 分割线 -->
+        <div class="section-divider">
+            <div class="divider-content">
+                <span class="divider-text">∿ 开始对话 ∿</span>
+            </div>
+        </div>
+
+        <!-- 联系我区域 -->
         <section id="contact" class="contact-section">
             <div class="section-container">
                 <div class="contact-content">
-                    <div class="contact-info">
-                        <h2 class="contact-title">让我们开始对话</h2>
-                        <p class="contact-description">
-                            有项目想要合作？想要交流技术？
-                            或者只是想说声hello？我很乐意听到你的声音。
-                        </p>
-                        <div class="contact-links">
-                            <a href="mailto:joey@example.com" class="contact-link">
-                                <div class="contact-icon">📧</div>
-                                <div class="contact-text">
-                                    <span>Email</span>
-                                    <span>joey@example.com</span>
+                    <div class="contact-intro">
+                        <h2 class="section-title">让我们聊聊吧</h2>
+                        <p class="section-subtitle">有趣的项目从一次对话开始</p>
+                        
+                        <div class="contact-description">
+                            <p>无论是项目合作、技术交流，还是单纯想说声 Hello，</p>
+                            <p>我都很乐意与你分享想法和经验。</p>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:joey@example.com" class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-content">
+                                    <div class="method-label">邮箱</div>
+                                    <div class="method-value">joey@example.com</div>
                                 </div>
+                                <div class="method-arrow">→</div>
                             </a>
-                            <a href="https://github.com/Joeywbbab" class="contact-link">
-                                <div class="contact-icon">🐱</div>
-                                <div class="contact-text">
-                                    <span>GitHub</span>
-                                    <span>@Joeywbbab</span>
+                            
+                            <a href="https://github.com/Joeywbbab" class="contact-method">
+                                <div class="method-icon">🐙</div>
+                                <div class="method-content">
+                                    <div class="method-label">GitHub</div>
+                                    <div class="method-value">@Joeywbbab</div>
                                 </div>
+                                <div class="method-arrow">→</div>
                             </a>
                         </div>
                     </div>
-                    <div class="contact-form">
-                        <form class="form">
-                            <div class="form-group">
-                                <label for="name">姓名</label>
-                                <input type="text" id="name" name="name" required>
+                    
+                    <div class="contact-form-container">
+                        <div class="form-header">
+                            <h3>或者在这里留言</h3>
+                            <p>我会尽快回复你的消息 ✨</p>
+                        </div>
+                        
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">姓名</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">邮箱</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
                             </div>
+                            
                             <div class="form-group">
-                                <label for="email">邮箱</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="subject">主题</label>
+                                <input type="text" id="subject" name="subject" placeholder="让我知道你想聊什么">
                             </div>
+                            
                             <div class="form-group">
                                 <label for="message">消息</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <textarea id="message" name="message" rows="5" placeholder="说点什么吧..." required></textarea>
                             </div>
-                            <button type="submit" class="btn-primary">
+                            
+                            <button type="submit" class="submit-btn">
                                 <span>发送消息</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <div class="btn-icon">✨</div>
                             </button>
                         </form>
                     </div>
@@ -316,17 +485,17 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2024 Joey. 用 ❤️ 和 ☕ 制作</p>
+                    <p>© 2024 Joey. 用 <span class="heart">❤️</span> 和 <span class="coffee">☕</span> 制作</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">回到顶部</a>
+                    <a href="#home" class="footer-link">回到顶部 ↑</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // 简单的平滑滚动
+        // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -340,7 +509,7 @@
             });
         });
 
-        // 移动端导航切换
+        // 移动端导航
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
         
@@ -348,35 +517,56 @@
             navMenu.classList.toggle('active');
         });
 
-        // 打字效果
-        const typingText = document.querySelector('.typing-text');
-        const words = ['开发者', '设计师', '创作者', '梦想家'];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function typeEffect() {
-            const currentWord = words[wordIndex];
+        // 旋转文字动画
+        function rotateWords() {
+            const words = document.querySelectorAll('.rotating-words .word');
+            let current = 0;
             
-            if (isDeleting) {
-                typingText.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentWord.length) {
-                setTimeout(() => isDeleting = true, 1000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-            }
-
-            setTimeout(typeEffect, isDeleting ? 50 : 100);
+            setInterval(() => {
+                words[current].classList.remove('active');
+                current = (current + 1) % words.length;
+                words[current].classList.add('active');
+            }, 2000);
         }
+        
+        rotateWords();
 
-        typeEffect();
+        // 滚动时的视差效果
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            const shapes = document.querySelectorAll('.floating-shape');
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + index * 0.1;
+                shape.style.transform = `translateY(${rate * speed}px)`;
+            });
+        });
+
+        // 表单提交
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('.submit-btn');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<span>发送中...</span><div class="btn-icon">⏳</div>';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span>发送成功!</span><div class="btn-icon">✅</div>';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    form.reset();
+                }, 2000);
+            }, 1000);
+        });
+
+        // 页面加载动画
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
     </script>
 </body>
 </html>
