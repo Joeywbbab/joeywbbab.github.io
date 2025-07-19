@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joeyyyyuwww - Creative Developer ✨</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -248,95 +248,124 @@
                     <p class="section-subtitle">Every project is a breakthrough</p>
                 </div>
                 
-                <div class="work-grid">
-                    <div class="work-item featured">
-                        <div class="work-image">
-                            <div class="work-preview">
-                                <div class="preview-gradient"></div>
-                                <div class="preview-content">
-                                    <div class="preview-icon">🎨</div>
-                                    <div class="preview-text">Personal Portfolio</div>
+                <div class="work-asymmetric-grid">
+                    <!-- 大型展示卡片 -->
+                    <div class="work-card large">
+                        <div class="work-visual">
+                            <div class="design-mockup">
+                                <div class="browser-window">
+                                    <div class="browser-bar">
+                                        <div class="browser-dots">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <div class="website-preview">
+                                            <div class="preview-header"></div>
+                                            <div class="preview-content">
+                                                <div class="preview-text"></div>
+                                                <div class="preview-text short"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="work-content">
+                        <div class="work-info">
                             <div class="work-meta">
-                                <span class="work-category">Web Design</span>
+                                <span class="work-category primary">Web Design</span>
                                 <span class="work-year">2024</span>
                             </div>
                             <h3 class="work-title">Modern Personal Website</h3>
                             <p class="work-description">
                                 A creative and personalized portfolio website that combines modern design principles with advanced frontend technologies.
                             </p>
-                            <div class="work-tech">
+                            <div class="work-tech-stack">
                                 <span>HTML5</span>
                                 <span>CSS3</span>
                                 <span>JavaScript</span>
                                 <span>Responsive Design</span>
                             </div>
                             <div class="work-actions">
-                                <a href="#" class="work-link primary">
+                                <a href="#" class="btn-primary">
                                     <span>View Project</span>
-                                    <div class="link-arrow">↗</div>
+                                    <div class="btn-icon">↗</div>
                                 </a>
-                                <a href="#" class="work-link secondary">
+                                <a href="#" class="btn-secondary">
                                     <span>Source Code</span>
-                                    <div class="link-icon">🔗</div>
+                                    <div class="btn-icon">🔗</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="work-item">
-                        <div class="work-image">
-                            <div class="work-preview">
-                                <div class="preview-gradient orange"></div>
-                                <div class="preview-content">
-                                    <div class="preview-icon">🚀</div>
-                                    <div class="preview-text">Product Design</div>
+                    <!-- 小型卡片组 -->
+                    <div class="work-card-group">
+                        <div class="work-card small">
+                            <div class="work-visual compact">
+                                <div class="app-mockup">
+                                    <div class="phone-frame">
+                                        <div class="screen">
+                                            <div class="app-ui">
+                                                <div class="ui-element header"></div>
+                                                <div class="ui-element card"></div>
+                                                <div class="ui-element card"></div>
+                                                <div class="ui-element nav"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-info compact">
+                                <div class="work-meta">
+                                    <span class="work-category secondary">UI/UX</span>
+                                    <span class="work-year">2024</span>
+                                </div>
+                                <h3 class="work-title">Innovative App Interface</h3>
+                                <p class="work-description">
+                                    User-experience focused mobile app design with clean yet expressive interface.
+                                </p>
+                                <div class="work-tech-stack">
+                                    <span>Figma</span>
+                                    <span>Prototype</span>
+                                    <span>User Research</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="work-content">
-                            <div class="work-meta">
-                                <span class="work-category">UI/UX</span>
-                                <span class="work-year">2024</span>
-                            </div>
-                            <h3 class="work-title">Innovative App Interface</h3>
-                            <p class="work-description">
-                                User-experience focused mobile app design with clean yet expressive interface design.
-                            </p>
-                            <div class="work-tech">
-                                <span>Figma</span>
-                                <span>Prototype</span>
-                                <span>User Research</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="work-item">
-                        <div class="work-image">
-                            <div class="work-preview">
-                                <div class="preview-gradient green"></div>
-                                <div class="preview-content">
-                                    <div class="preview-icon">⚡</div>
-                                    <div class="preview-text">Development Tools</div>
+                        
+                        <div class="work-card small">
+                            <div class="work-visual compact">
+                                <div class="code-illustration">
+                                    <div class="terminal-window">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">~/projects</span>
+                                        </div>
+                                        <div class="terminal-body">
+                                            <div class="terminal-line">
+                                                <span class="prompt">$</span>
+                                                <span class="command">npm run dev</span>
+                                            </div>
+                                            <div class="terminal-line output">
+                                                <span class="success">✓ Ready in 3.2s</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="work-content">
-                            <div class="work-meta">
-                                <span class="work-category">Open Source</span>
-                                <span class="work-year">2024</span>
-                            </div>
-                            <h3 class="work-title">Efficiency Toolkit</h3>
-                            <p class="work-description">
-                                A practical collection of tools to improve development efficiency, helping developers complete projects faster and better.
-                            </p>
-                            <div class="work-tech">
-                                <span>TypeScript</span>
-                                <span>Node.js</span>
-                                <span>CLI Tools</span>
+                            <div class="work-info compact">
+                                <div class="work-meta">
+                                    <span class="work-category tertiary">Open Source</span>
+                                    <span class="work-year">2024</span>
+                                </div>
+                                <h3 class="work-title">Efficiency Toolkit</h3>
+                                <p class="work-description">
+                                    A practical collection of tools to improve development efficiency.
+                                </p>
+                                <div class="work-tech-stack">
+                                    <span>TypeScript</span>
+                                    <span>Node.js</span>
+                                    <span>CLI Tools</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -359,50 +388,75 @@
                     <p class="section-subtitle">Recording every step of growth</p>
                 </div>
                 
-                <div class="articles-grid">
-                    <article class="article-card featured">
-                        <div class="article-image">
-                            <div class="article-gradient"></div>
-                            <div class="article-icon">🏗️</div>
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="article-date">January 15, 2024</span>
-                                <span class="article-category">Tech Sharing</span>
+                <div class="articles-mac-grid">
+                    <article class="mac-card primary">
+                        <div class="mac-card-header">
+                            <div class="mac-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
                             </div>
-                            <h3 class="article-title">
-                                <a href="articles/article2.html">Building a Personal Website from Scratch</a>
-                            </h3>
-                            <p class="article-excerpt">
-                                Sharing my complete process of building a personal website using GitHub Pages, from domain configuration to design implementation details.
-                            </p>
-                            <div class="article-tags">
-                                <span>GitHub Pages</span>
-                                <span>Web开发</span>
-                                <span>Personal Branding</span>
+                            <div class="mac-title">Tech Sharing</div>
+                        </div>
+                        <div class="mac-card-content">
+                            <div class="article-illustration">
+                                <div class="code-window">
+                                    <div class="code-line">&lt;div class="website"&gt;</div>
+                                    <div class="code-line highlight">  &lt;h1&gt;Hello World&lt;/h1&gt;</div>
+                                    <div class="code-line">&lt;/div&gt;</div>
+                                </div>
+                            </div>
+                            <div class="article-info">
+                                <div class="article-meta">
+                                    <span class="article-date">January 15, 2024</span>
+                                </div>
+                                <h3 class="article-title">
+                                    <a href="articles/article2.html">Building a Personal Website from Scratch</a>
+                                </h3>
+                                <p class="article-excerpt">
+                                    Sharing my complete process of building a personal website using GitHub Pages, from domain configuration to design implementation details.
+                                </p>
+                                <div class="article-tags">
+                                    <span>GitHub Pages</span>
+                                    <span>Web开发</span>
+                                    <span>Personal Branding</span>
+                                </div>
                             </div>
                         </div>
                     </article>
                     
-                    <article class="article-card">
-                        <div class="article-image">
-                            <div class="article-gradient purple"></div>
-                            <div class="article-icon">💭</div>
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="article-date">January 1, 2024</span>
-                                <span class="article-category">Personal Thoughts</span>
+                    <article class="mac-card secondary">
+                        <div class="mac-card-header">
+                            <div class="mac-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
                             </div>
-                            <h3 class="article-title">
-                                <a href="articles/article1.html">The Original Intent of Creation</a>
-                            </h3>
-                            <p class="article-excerpt">
-                                Recording my original intention of creating this website, and my love for technology and design.
-                            </p>
-                            <div class="article-tags">
-                                <span>Personal Thoughts</span>
-                                <span>Creative Sharing</span>
+                            <div class="mac-title">Personal Thoughts</div>
+                        </div>
+                        <div class="mac-card-content">
+                            <div class="article-illustration">
+                                <div class="thought-bubble">
+                                    <div class="idea-icon">💡</div>
+                                    <div class="spark spark-1">✨</div>
+                                    <div class="spark spark-2">✨</div>
+                                    <div class="spark spark-3">✨</div>
+                                </div>
+                            </div>
+                            <div class="article-info">
+                                <div class="article-meta">
+                                    <span class="article-date">January 1, 2024</span>
+                                </div>
+                                <h3 class="article-title">
+                                    <a href="articles/article1.html">The Original Intent of Creation</a>
+                                </h3>
+                                <p class="article-excerpt">
+                                    Recording my original intention of creating this website, and my love for technology and design.
+                                </p>
+                                <div class="article-tags">
+                                    <span>Personal Thoughts</span>
+                                    <span>Creative Sharing</span>
+                                </div>
                             </div>
                         </div>
                     </article>
