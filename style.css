@@ -236,6 +236,7 @@ body.loaded {
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-gray-200);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -1235,6 +1236,7 @@ body.loaded {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    border: 3px solid red !important; /* 临时测试样式 */
 }
 
 /* Mac风格卡片 */
@@ -1247,6 +1249,7 @@ body.loaded {
     border: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .mac-card:hover {
