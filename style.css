@@ -784,7 +784,7 @@ body.loaded {
     color: var(--text-secondary);
 }
 
-/* 推荐阅读区域 */
+/* 推荐阅读区域 - 横排滑动 */
 .recommended-reading {
     padding-left: var(--space-xl);
 }
@@ -797,89 +797,87 @@ body.loaded {
     font-family: var(--font-display);
 }
 
-.reading-cards {
-    display: grid;
-    gap: var(--space-lg);
+.reading-cards-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: var(--space-sm);
 }
 
-.reading-card {
+.reading-cards-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.reading-cards-scroll::-webkit-scrollbar-track {
+    background: var(--color-gray-100);
+    border-radius: 3px;
+}
+
+.reading-cards-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary-purple);
+    border-radius: 3px;
+}
+
+.reading-cards-container {
+    display: flex;
+    gap: var(--space-md);
+    padding-bottom: var(--space-xs);
+    min-width: max-content;
+}
+
+.reading-card-horizontal {
     display: flex;
     background: var(--bg-primary);
-    border-radius: 16px;
-    padding: var(--space-lg);
+    border-radius: 12px;
+    padding: var(--space-md);
     text-decoration: none;
     color: inherit;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-gray-200);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    min-width: 200px;
+    flex-shrink: 0;
 }
 
-.reading-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+.reading-card-horizontal:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
     border-color: var(--primary-purple);
 }
 
-.reading-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 127, 184, 0.03) 0%, rgba(160, 130, 109, 0.03) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.reading-card:hover::before {
-    opacity: 1;
-}
-
-.card-image {
-    width: 60px;
-    height: 60px;
+.card-image-small {
+    width: 40px;
+    height: 40px;
     background: var(--gradient-purple);
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: var(--space-lg);
+    margin-right: var(--space-md);
     flex-shrink: 0;
-    position: relative;
-    z-index: 2;
 }
 
 .card-icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.card-content {
+.card-content-horizontal {
     flex: 1;
-    position: relative;
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.card-content h4 {
-    font-size: 1.1rem;
+.card-content-horizontal h4 {
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--space-xs);
     line-height: 1.3;
 }
 
-.card-content p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: var(--space-sm);
-}
-
 .card-source {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--primary-purple);
     font-weight: 500;
     text-transform: uppercase;
@@ -1300,7 +1298,7 @@ body.loaded {
     transform: translateX(2px);
 }
 
-/* What I'm Observing & Building 部分 */
+/* What I'm Observing & Building 部分 - 新布局 */
 .observing-building-section {
     padding: var(--space-4xl) 0;
     background: var(--gradient-sophisticated);
@@ -1310,139 +1308,23 @@ body.loaded {
 .observing-header {
     text-align: center;
     margin-bottom: var(--space-4xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.observing-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--space-4xl);
-    align-items: start;
-}
-
-/* 观察卡片网格 */
-.observation-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-}
-
-.obs-card {
+/* 头部叙述性内容 */
+.section-narrative {
+    margin: var(--space-xl) 0;
     background: var(--bg-primary);
     border-radius: 20px;
     padding: var(--space-xl);
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--color-gray-200);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    text-align: left;
 }
 
-.obs-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-}
-
-.obs-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.obs-card.trending::before {
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(22, 163, 74, 0.05) 100%);
-}
-
-.obs-card.building::before {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
-}
-
-.obs-card.future::before {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
-}
-
-.obs-card.experimental::before {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%);
-}
-
-.obs-card:hover::before {
-    opacity: 1;
-}
-
-.obs-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--space-md);
-    position: relative;
-    z-index: 2;
-}
-
-.obs-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: var(--space-md);
-    position: relative;
-    z-index: 2;
-}
-
-.obs-card p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: var(--space-lg);
-    position: relative;
-    z-index: 2;
-}
-
-.obs-status {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    position: relative;
-    z-index: 2;
-}
-
-.obs-card.trending .obs-status {
-    background: rgba(34, 197, 94, 0.1);
-    color: #059669;
-}
-
-.obs-card.building .obs-status {
-    background: rgba(59, 130, 246, 0.1);
-    color: #2563eb;
-}
-
-.obs-card.future .obs-status {
-    background: rgba(139, 92, 246, 0.1);
-    color: #7c3aed;
-}
-
-.obs-card.experimental .obs-status {
-    background: rgba(245, 158, 11, 0.1);
-    color: #d97706;
-}
-
-/* 叙述性内容 */
-.observing-narrative {
-    padding-left: var(--space-xl);
-}
-
-.narrative-content {
-    background: var(--bg-primary);
-    border-radius: 20px;
-    padding: var(--space-xl);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-gray-200);
-}
-
-.narrative-content h3 {
+.section-narrative h3 {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -1450,28 +1332,147 @@ body.loaded {
     font-family: var(--font-display);
 }
 
-.narrative-content p {
+.section-narrative p {
     color: var(--text-secondary);
     line-height: 1.7;
-    margin-bottom: var(--space-lg);
     font-size: 1.1rem;
+    margin-bottom: var(--space-lg);
 }
 
-.learning-quote {
-    margin-top: var(--space-xl);
-    padding: var(--space-lg);
+.learning-quote-inline {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
     background: var(--gradient-purple);
-    border-radius: 16px;
-    position: relative;
+    border-radius: 12px;
 }
 
-.learning-quote blockquote {
+.learning-quote-inline blockquote {
     margin: 0;
     color: white;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     font-family: var(--font-display);
+}
+
+/* Mac风格观察卡片网格 */
+.observation-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mac-obs-card {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.mac-obs-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mac-obs-card.trending {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, var(--primary-cream) 100%);
+}
+
+.mac-obs-card.building {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, var(--primary-lavender) 100%);
+}
+
+.mac-obs-card.future {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, var(--primary-beige) 100%);
+}
+
+.mac-obs-card.experimental {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, var(--primary-cream) 100%);
+}
+
+/* Mac窗口头部 */
+.mac-obs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.mac-title-small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: center;
+    flex: 1;
+    margin-left: -60px;
+}
+
+/* Mac观察卡片内容 */
+.mac-obs-content {
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.obs-icon-large {
+    font-size: 3rem;
+    margin-bottom: var(--space-lg);
+    display: block;
+}
+
+.mac-obs-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+}
+
+.mac-obs-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+    font-size: 0.95rem;
+}
+
+.obs-status {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trending-status {
+    background: rgba(34, 197, 94, 0.1);
+    color: #059669;
+}
+
+.building-status {
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+}
+
+.future-status {
+    background: rgba(139, 92, 246, 0.1);
+    color: #7c3aed;
+}
+
+.experimental-status {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
 }
 
 /* 文章区域 - Mac风格设计 */
@@ -2016,17 +2017,9 @@ body.loaded {
         padding-left: 0;
     }
     
-    .observing-content {
+    .observation-cards-grid {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
-    }
-    
-    .observation-cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .observing-narrative {
-        padding-left: 0;
     }
     
     .articles-mac-grid {
